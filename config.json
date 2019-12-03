@@ -1,0 +1,7 @@
+{
+  "googleIPList": {
+    "YOUR_GOOGLE_SERVER_IP_1": false,
+    "YOUR_GOOGLE_SERVER_IP_2": false
+  },
+  "authKey": "YOUR_AUTH_KEY"
+}

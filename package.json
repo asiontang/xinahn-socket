@@ -1,0 +1,34 @@
+{
+  "name": "llb-socket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "in_dorm.js",
+  "scripts": {
+    "install-chromedriver": "node node_modules/chromedriver/install.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "chinese-conv": "^1.0.1",
+    "chromedriver": "^78.0.1",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.0",
+    "iconv-lite": "^0.5.0",
+    "mathjs": "^6.2.3",
+    "nconf": "^0.10.0",
+    "performance": "^1.1.1",
+    "querystring": "^0.2.0",
+    "request": "^2.88.0",
+    "selenium-webdriver": "^4.0.0-alpha.5",
+    "sleep-promise": "^8.0.1",
+    "socket.io": "^2.2.0",
+    "socket.io-client": "^2.3.0",
+    "tld-extract": "^1.1.2",
+    "uuid": "^3.3.3"
+  }
+}
