@@ -50,7 +50,7 @@ $ node minion.js
 server {
 	...
 	location ^~ /api/ {
-		proxy_pass http://localhost:4100
+		proxy_pass http://localhost:4100;
  	}
 	...
 }
