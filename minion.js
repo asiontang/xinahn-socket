@@ -202,19 +202,6 @@ socket.on('search', async ({ requestId, query, page }) => {
     }
   }
 
-  // Update pr score for each search objects.
-  for (let r_ of results) {
-    if (dList.indexOf(r_.domain) !== -1) {
-      r_['score'] = dDict[r_.domain];
-    }
-  }
-  results.sort((a, b) => {
-    if (a.score < b.score)
-      return 1;
-    if (a.score > b.score)
-      return -1;
-    return 0;
-  })
 
   zhihus.sort((a, b) => {
     if (a.score < b.score)
