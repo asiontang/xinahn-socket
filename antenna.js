@@ -13,7 +13,7 @@ const PORT = 4100;
 
 // Google IP List
 // IP_ADDR: IN_USE
-let googleIPList = nconf.get('googlIPList');
+let googleIPList = {};
 
 // Data structure: { available: bool, getSearchResult: fn }
 let socketDict = {};
