@@ -22,9 +22,9 @@ const options = new chrome.Options()
   .addArguments('headless')
   .addArguments('start-maximized')
   .addArguments('incognito')
+  .addArguments('no-sandbox')
   .setUserPreferences({
     'profile.managed_default_content_settings.images': 2,
-    'disk-cache-size': 4096
   })
 
 let driver;

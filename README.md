@@ -42,7 +42,7 @@ $ node antenna.js
 ```console
 $ node minion.js
 ```
-**Note** 这边注意不能跑在root。
+**注意：minion.js 不能跑在root。**
 
 ### Nginx 设置
 将以下代码黏贴于 ```/etc/nginx/sites-available/default.conf``` 之中。
