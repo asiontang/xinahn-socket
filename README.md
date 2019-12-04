@@ -21,7 +21,9 @@
 | [知乎](https://zhihu.com) | [se_zhihuParser.js](https://github.com/xinahn/xinahn-socket/blob/master/utils/se_zhihuParser.js) | ✅ |
 
 ### 事前准备
-确认已安装Nginx以及Node.js
+1. 确认已安装Nginx以及Node.js
+2. ```apt install default-jre```
+3. ```apt install chromium-driver```
 
 ### 安装
 ```console
@@ -40,6 +42,7 @@ $ node antenna.js
 ```console
 $ node minion.js
 ```
+**Note** 这边注意不能跑在root。
 
 ### Nginx 设置
 将以下代码黏贴于 ```/etc/nginx/sites-available/default.conf``` 之中。
