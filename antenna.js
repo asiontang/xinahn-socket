@@ -49,19 +49,24 @@ app.get('/api/suggestion', (req, res) => {
     request(
       `https://www.baidu.com/sugrec?ie=utf-8&json=1&prod=pc&from=pc_web&wd=${encodeURI(q)}`,
       (err, response, body) => {
-        if　(err) return res.send([ q, []]);
-        if (body.startsWith('<')) {
+        try {
+          if　(err) return res.send([ q, []]);
+          if (body.startsWith('<')) {
+            console.log('[ERROR] Baidu rejecting keyword search.');
+            return res.send([ q, [] ]);
+          }
+          let result = JSON.parse(body);
+          let ourResponse = [];
+          if (result.g)
+            for(let s of result.g) {
+              ourResponse.push(s.q)
+            }
+          cacheSuggestions[encodeURI(q)] = ourResponse;
+          return res.send([ q, ourResponse]);
+        } catch {
           console.log('[ERROR] Baidu rejecting keyword search.');
           return res.send([ q, [] ]);
         }
-        let result = JSON.parse(body);
-        let ourResponse = [];
-        if (result.g)
-          for(let s of result.g) {
-            ourResponse.push(s.q)
-          }
-        cacheSuggestions[encodeURI(q)] = ourResponse;
-        return res.send([ q, ourResponse]);
       }
     );
   } catch {
